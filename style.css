@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+.envoltorio {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.numero-horas,
+.marcas-referencia {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+}
+
+.numero-horas span {
+  position: absolute;
+  transform: rotate(calc(var(--indice) * 30deg));
+  inset: 6px;
+  text-align: center;
+}
+
+.numero-horas span p {
+  font-size: 52px;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  transform: rotate(calc(var(--indice) * -30deg));
+}
+
+.marcas-referencia span {
+  position: absolute;
+  transform: rotate(calc(var(--indice) * 6deg));
+  width: 100%;
+  height: 100%;
+}
+
+.marcas-referencia span p {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: #ffcc00;
+}
+
+.caja-manetas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja-manetas .maneta {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.caja-manetas .maneta i {
+  display: inline-block;
+  transform-origin: bottom;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+.caja-manetas .horas {
+  width: 320px;
+  height: 320px;
+  transform: rotate(0deg);
+}
+
+.caja-manetas .horas i {
+  width: 8px;
+  height: 160px;
+  background: #ffcc00;
+}
+
+.caja-manetas .minutos {
+  width: 450px;
+  height: 450px;
+  transform: rotate(0deg);
+}
+
+.caja-manetas .minutos::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ffcc00;
+}
+
+.caja-manetas .minutos i {
+  width: 8px;
+  height: 225px;
+  background: #ffcc00;
+}
+
+.caja-manetas .segundos {
+  width: 480px;
+  height: 480px;
+  border: 2px solid #ffcc00;
+  transform: rotate(0deg);
+}
+
+.caja-manetas .segundos::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #ffcc00;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.caja-manetas .segundos i {
+  width: 4px;
+  height: 240px;
+  background: #ffcc00;
+  box-shadow: none;
+}
